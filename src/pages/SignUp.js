@@ -18,6 +18,7 @@ const SignUp = () => {
 		email: '',
 		password: '',
 	});
+
 	const { name, email, password } = formData;
 
 	const navigate = useNavigate();
@@ -33,16 +34,20 @@ const SignUp = () => {
 		e.preventDefault();
 
 		try {
+			//intialize and gives us auth object
 			const auth = getAuth();
 
+			//pass email and password along with auth object, which gives us usercredentials
 			const userCredential = await createUserWithEmailAndPassword(
 				auth,
 				email,
 				password
 			);
 
+			//get the signedin user
 			const user = userCredential.user;
 
+			// auth.currentuser is signedin
 			updateProfile(auth.currentUser, {
 				displayName: name,
 			});
@@ -51,6 +56,7 @@ const SignUp = () => {
 			delete formDataCopy.password;
 			formDataCopy.timestamp = serverTimestamp();
 
+			//create document in database
 			await setDoc(doc(db, 'users', user.uid), formDataCopy);
 
 			navigate('/');
