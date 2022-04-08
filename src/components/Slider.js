@@ -8,7 +8,7 @@ import 'swiper/swiper-bundle.css';
 import Spinner from './Spinner';
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-function Slider() {
+const Slider = () => {
 	const [loading, setLoading] = useState(true);
 	const [listings, setListings] = useState(null);
 
@@ -74,6 +74,6 @@ function Slider() {
 			</>
 		)
 	);
-}
+};
 
 export default Slider;
