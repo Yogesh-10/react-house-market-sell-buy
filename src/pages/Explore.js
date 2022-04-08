@@ -3,7 +3,7 @@ import Slider from '../components/Slider';
 import rentCategoryImage from '../assets/jpg/rentCategoryImage.jpg';
 import sellCategoryImage from '../assets/jpg/sellCategoryImage.jpg';
 
-function Explore() {
+const Explore = () => {
 	return (
 		<div className='explore'>
 			<header>
@@ -35,6 +35,6 @@ function Explore() {
 			</main>
 		</div>
 	);
-}
+};
 
 export default Explore;
