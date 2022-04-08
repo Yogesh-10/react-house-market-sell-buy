@@ -14,7 +14,7 @@ import { toast } from 'react-toastify';
 import Spinner from '../components/Spinner';
 import ListingItem from '../components/ListingItem';
 
-function Category() {
+const Category = () => {
 	const [listings, setListings] = useState(null);
 	const [loading, setLoading] = useState(true);
 	const [lastFetchedListing, setLastFetchedListing] = useState(null);
@@ -136,6 +136,6 @@ function Category() {
 			)}
 		</div>
 	);
-}
+};
 
 export default Category;
