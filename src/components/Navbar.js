@@ -3,7 +3,7 @@ import { ReactComponent as OfferIcon } from '../assets/svg/localOfferIcon.svg';
 import { ReactComponent as ExploreIcon } from '../assets/svg/exploreIcon.svg';
 import { ReactComponent as PersonOutlineIcon } from '../assets/svg/personOutlineIcon.svg';
 
-function Navbar() {
+const Navbar = () => {
 	const navigate = useNavigate();
 	const location = useLocation();
 
@@ -69,6 +69,6 @@ function Navbar() {
 			</nav>
 		</footer>
 	);
-}
+};
 
 export default Navbar;
