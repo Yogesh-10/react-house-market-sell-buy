@@ -13,7 +13,7 @@ import { toast } from 'react-toastify';
 import { v4 as uuidv4 } from 'uuid';
 import Spinner from '../components/Spinner';
 
-function EditListing() {
+const EditListing = () => {
 	// eslint-disable-next-line
 	const [geolocationEnabled, setGeolocationEnabled] = useState(false);
 	const [loading, setLoading] = useState(false);
@@ -481,6 +481,6 @@ function EditListing() {
 			</main>
 		</div>
 	);
-}
+};
 
 export default EditListing;
